@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matsanela Ai Chat - Edukasi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-icon"><i class="fas fa-robot"></i></div>
+            <h1 class="header-title">Matsanela Ai</h1>
+            <div class="header-actions">
+                <button id="clearChatUIBtn" class="clear-chat-btn glow-on-hover" title="Bersihkan Tampilan Chat (Sesi Tetap Tersimpan)">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </header>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai-message entry-animation">
+                <div class="message-bubble">
+                    <p>Halo! Saya Matsanela Ai, asisten edukasi Anda. Ada yang bisa saya bantu?</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <div class="uploaded-files-preview" id="uploadedFilesPreview"></div>
+            <div class="input-wrapper">
+                <label for="fileInput" class="attach-button glow-on-hover" title="Unggah File/Gambar">
+                    <i class="fas fa-paperclip"></i>
+                    <input type="file" id="fileInput" multiple accept="image/*, video/*, application/pdf, text/plain, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                </label>
+                <textarea id="messageInput" placeholder="Ketik pesan Anda..." rows="1"></textarea>
+                <button id="sendMessageBtn" class="send-button glow-on-hover" title="Kirim Pesan">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="loadingOverlay">
+        <div class="spinner">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+            <div class="bubble-3"></div>
+        </div>
+        <p>Matsanela Ai sedang berpikir...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
